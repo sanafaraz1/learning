@@ -21,7 +21,11 @@ public class QueueUsingInbuiltStackBetter {
             }
         }
         Integer popped = (Integer) stack2.pop();
-        front = (Integer) stack2.peek();
+        if(!stack2.isEmpty()) {
+            front = (Integer) stack2.peek();
+        }else {
+            front = null;  
+        }
         return popped;
 
     }
